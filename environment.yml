@@ -2,7 +2,8 @@ name: cpp-test
 channels:
   - defaults
   - conda-forge
+  - anaconda
 dependencies:
   - cmake
-  - gcc_linux-64 
-  - boost
+  - gcc_linux-64
+  #- boost
