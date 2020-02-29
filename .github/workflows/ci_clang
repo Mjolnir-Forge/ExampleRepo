@@ -20,13 +20,13 @@ jobs:
       run: |
         source activate cpp-test
         cmake --version
-        gcc --version
+        clang --version
     - name: Run cmake
       run: |
         source activate cpp-test
         mkdir build
         cd build
-        cmake ../
+        cmake -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ ../
     - name: Compile
       run: |
         source activate cpp-test
