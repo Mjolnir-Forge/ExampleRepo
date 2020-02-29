@@ -30,8 +30,10 @@ jobs:
     - name: Compile
       run: |
         source activate cpp-test
+	cd build
         make -j2
     - name: Run tests
       run: |
         source activate cpp-test
+        cd build
         ctest
