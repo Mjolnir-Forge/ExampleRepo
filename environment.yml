@@ -6,4 +6,4 @@ channels:
 dependencies:
   - cmake
   - gcc_linux-64
-  #- boost
+  - boost
