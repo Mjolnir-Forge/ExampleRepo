@@ -16,10 +16,22 @@ jobs:
       run: conda info -a
     - name: Create conda environment
       run: conda env create -f ./environment.yml
-    - name: Compile
+    - name: Print version numbers
+      run: |
+        source activate cpp-test
+        cmake --version
+        gcc --version
+    - name: Run cmake
       run: |
         source activate cpp-test
         mkdir build
         cd build
         cmake ../
+    - name: Compile
+      run: |
+        source activate cpp-test
         make -j2
+    - name: Run tests
+      run: |
+        source activate cpp-test
+        ctest

@@ -4,5 +4,5 @@ channels:
   - conda-forge
 dependencies:
   #- cmake
-  - gcc_linux-64 
-  #- boost
+  #- gcc_linux-64 
+  - boost
