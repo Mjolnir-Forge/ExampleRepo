@@ -1,0 +1,38 @@
+name: CI MSVC
+on: [push]
+
+jobs:
+  test:
+    name: CI Build
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-latest]
+    steps:
+    - uses: actions/checkout@v1
+    - name: Include $CONDA in $PATH
+      run: echo ::add-path::$CONDA/bin
+    - name: Print conda info
+      run: conda info -a
+    - name: Create conda environment
+      run: conda env create -f ./environment_win.yml
+    - name: Print version numbers
+      run: |
+        source activate cpp-test
+        cmake --version
+    - name: Run cmake
+      run: |
+        source activate cpp-test
+        mkdir build
+        cd build
+        cmake ../
+    - name: Compile
+      run: |
+        source activate cpp-test
+        cd build
+        make -j2
+    - name: Run tests
+      run: |
+        source activate cpp-test
+        cd build
+        ctest
