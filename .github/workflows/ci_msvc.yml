@@ -20,21 +20,21 @@ jobs:
       run: conda env create -f ./environment_win.yml
     - name: Print version numbers
       run: |
-        source activate cpp-test
+        conda activate cpp-test
         cmake --version
     - name: Run cmake
       run: |
-        source activate cpp-test
+        conda activate cpp-test
         mkdir build
         cd build
         cmake ../
     - name: Compile
       run: |
-        source activate cpp-test
+        conda activate cpp-test
         cd build
         make -j2
     - name: Run tests
       run: |
-        source activate cpp-test
+        conda activate cpp-test
         cd build
         ctest
