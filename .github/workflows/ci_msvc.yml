@@ -18,6 +18,8 @@ jobs:
       run: conda info -a
     - name: Create conda environment
       run: conda env create -f ./environment_win.yml
+    - name: Init bash
+      run: conda init powershell
     - name: Print version numbers
       run: |
         conda activate cpp-test
