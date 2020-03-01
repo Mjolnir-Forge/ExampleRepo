@@ -10,8 +10,10 @@ jobs:
         os: [windows-latest]
     steps:
     - uses: actions/checkout@v1
-    - name: Include $CONDA in $PATH
-      run: echo ::add-path::$CONDA/bin
+    - name: Add conda directories to PATH
+      run: |
+        echo ::add-path::C:\Miniconda
+        echo ::add-path::C:\Miniconda\Scripts
     - name: Print conda info
       run: conda info -a
     - name: Create conda environment
