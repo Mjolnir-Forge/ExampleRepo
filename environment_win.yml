@@ -5,5 +5,4 @@ channels:
   - anaconda
 dependencies:
   - cmake
-  - glew
-  - boost=1.65.0
+  - boost
