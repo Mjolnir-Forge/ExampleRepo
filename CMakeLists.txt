@@ -4,7 +4,7 @@ set(CMAKE_VERBOSE_MAKEFILE OFF)
 
 set(DEFAULT_COMPILE_FEATURES cxx_std_17)
 
-FIND_PACKAGE(BOOST )
+FIND_PACKAGE(Boost REQUIRED unit_test_framework)
 
 add_executable(HelloWorld
     src/helloWorld.cpp)
