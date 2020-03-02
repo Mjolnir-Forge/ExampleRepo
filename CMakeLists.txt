@@ -4,7 +4,7 @@ set(CMAKE_VERBOSE_MAKEFILE OFF)
 
 set(DEFAULT_COMPILE_FEATURES cxx_std_17)
 
-FIND_PACKAGE(glew)
+#FIND_PACKAGE(glew)
 
 add_executable(HelloWorld
     src/helloWorld.cpp)
