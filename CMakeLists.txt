@@ -4,7 +4,7 @@ set(CMAKE_VERBOSE_MAKEFILE OFF)
 
 set(DEFAULT_COMPILE_FEATURES cxx_std_17)
 
-FIND_PACKAGE(Boost)
+FIND_PACKAGE(glew)
 
 add_executable(HelloWorld
     src/helloWorld.cpp)
@@ -13,12 +13,12 @@ target_compile_features(HelloWorld
     PRIVATE
         ${DEFAULT_COMPILE_FEATURES})
 
-add_executable(TestExample
+#add_executable(TestExample
     tests/test_example.cpp)
 
-target_compile_features(TestExample
-    PRIVATE
-        ${DEFAULT_COMPILE_FEATURES})
+#target_compile_features(TestExample
+#    PRIVATE
+#        ${DEFAULT_COMPILE_FEATURES})
 
 #target_compile_definitions(TestExample
 #    PRIVATE
