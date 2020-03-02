@@ -6,4 +6,4 @@ channels:
 dependencies:
   - cmake
   - glew
-  - boost
+  - boost=1.65.0

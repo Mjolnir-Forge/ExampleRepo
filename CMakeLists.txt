@@ -14,7 +14,7 @@ target_compile_features(HelloWorld
         ${DEFAULT_COMPILE_FEATURES})
 
 #add_executable(TestExample
-    tests/test_example.cpp)
+#    tests/test_example.cpp)
 
 #target_compile_features(TestExample
 #    PRIVATE
